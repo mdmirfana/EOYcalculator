@@ -2,30 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Target Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Exam Score Calculator</title>
 </head>
 <body>
-    <div class="container">
-        <h1>End-of-Year Exam Target Calculator</h1>
-        <form id="scoreForm">
-            <label for="term1">Term 1 Score:</label>
-            <input type="number" id="term1" required><br>
-
-            <label for="term2">Term 2 Score:</label>
-            <input type="number" id="term2" required><br>
-
-            <label for="term3">Term 3 Score:</label>
-            <input type="number" id="term3" required><br>
-
-            <label for="target">Target Score:</label>
-            <input type="number" id="target" required><br>
-
-            <button type="button" onclick="calculateRequiredScore()">Calculate</button>
-        </form>
-        <div id="result"></div>
+    <!-- Title -->
+    <h1>Calculate what score (in %) you will need to get in the EOY Exam for you to achieve your Overall Target Score</h1>
+    
+    <!-- Instruction Paragraph -->
+    <p>You will need your WA1, WA2, and WA3 result slips. Key in the % marks for the subject you want to calculate for. This bot will tell you if your target is possible to achieve, and how much you need to score in the upcoming EOY exams to achieve that Overall Target you have set. All the Best!!</p>
+    
+    <!-- Form for Input -->
+    <div>
+        <label for="term1">Key in WA1 marks from your report book:</label>
+        <input type="number" id="term1" placeholder="Enter WA1 marks" min="0" max="100"><br><br>
+        
+        <label for="term2">Key in WA2 marks from your report book:</label>
+        <input type="number" id="term2" placeholder="Enter WA2 marks" min="0" max="100"><br><br>
+        
+        <label for="term3">Key in WA3 marks from your report book:</label>
+        <input type="number" id="term3" placeholder="Enter WA3 marks" min="0" max="100"><br><br>
+        
+        <label for="target">Key in your OVERALL target score (in %) that you want to achieve:</label>
+        <input type="number" id="target" placeholder="Enter overall target score" min="0" max="100"><br><br>
+        
+        <button onclick="calculateRequiredScore()">Calculate Required EOY Score</button>
     </div>
+
+    <!-- Result Display -->
+    <div id="result"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
