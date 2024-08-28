@@ -42,4 +42,7 @@ button:hover {
 
 #result {
     margin-top: 20px;
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    color: blue; /* Blue text color */
 }
